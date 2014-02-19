@@ -31,9 +31,10 @@ describe("cc2str lib",function(){
     '1\n'+
     '00:00:00,080 --> 00:00:03,530\n'+
     "just want to show you uh... something i've been playing with lately\n"+
+    "\n"+
     "2\n" +
     "00:00:03,530 --> 00:00:08,629\n"+
-    "it's a javascript engine called pixie js by good boy digital\n";
+    "it's a javascript engine called pixie js by good boy digital\n\n";
 
     cc2str(ccstring, function(err,transcript){
 
@@ -61,7 +62,7 @@ describe('texts2str', function (){
       ]);
     var expctStr = "1\n"+
                    "00:00:00,080 --> 00:00:03,530\n" +
-                   "just want to show you\n" ;
+                   "just want to show you\n\n" ;
 
     expect(str).to.equal(expctStr);
 
