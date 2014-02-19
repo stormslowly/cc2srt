@@ -2,12 +2,12 @@
 "use strict";
 
 var fs = require('fs');
-var cc2str = require('../lib/cc2strlib.js').cc2str;
+var cc2str = require('../lib/cc2srtlib.js').cc2str;
 var program = require('commander');
 
 program
   .version('0.0.1')
-  .usage('cc2str <cc files>')
+  .usage('<cc files>')
   .parse(process.argv);
 
 

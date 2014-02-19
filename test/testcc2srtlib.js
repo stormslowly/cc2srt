@@ -5,7 +5,7 @@ var rewire = require('rewire');
 
 describe("cc2str lib",function(){
 
-  var cc2str = require('../lib/cc2strlib.js').cc2str;
+  var cc2str = require('../lib/cc2srtlib.js').cc2str;
 
   it("can't pares empty string",function (done){
 
@@ -27,7 +27,7 @@ describe("cc2str lib",function(){
        ' called pixie js by good boy digital</text>'+
     '</transcript>';
 
-    var expectStr = '' +
+    var expectSrt = '' +
     '1\n'+
     '00:00:00,080 --> 00:00:03,530\n'+
     "just want to show you uh... something i've been playing with lately\n"+
@@ -38,21 +38,20 @@ describe("cc2str lib",function(){
 
     cc2str(ccstring, function(err,transcript){
 
-      expect(transcript).to.equal(expectStr);
+      expect(transcript).to.equal(expectSrt);
       done();
     });
 
 
   });
 
-
 });
 
-describe('texts2str', function (){
+describe('texts2srt', function (){
 
-  var lib = rewire('../lib/cc2strlib.js');
+  var lib = rewire('../lib/cc2srtlib.js');
 
-  var cctexts2str = lib.__get__('ccTexts2str');
+  var cctexts2str = lib.__get__('ccTexts2srt');
 
   it('transform text array to str ',function (){
 
