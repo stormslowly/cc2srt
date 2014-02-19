@@ -1,7 +1,7 @@
 {
-  "name": "cc2str",
+  "name": "cc2srt",
   "version": "0.0.1",
-  "description": "a simple tool to convert goolge closed captions to str.",
+  "description": "a simple tool to convert goolge closed captions to srt file.",
   "main": "./lib/cc2strlib.js",
   "dependencies": {
     "xml2js": "~0.4.1",
@@ -16,7 +16,7 @@
     "url": "https://github.com/stormslowly/cc2str.git"
   },
   "bin":{
-    "cc2str":"./bin/cc2str"
+    "cc2srt":"./bin/cc2srt"
   },
   "scripts": {
     "test": "mocha"
