@@ -19,12 +19,25 @@ describe("cc2str lib",function(){
 
 
   it("can parse transcript",function (done){
-    var ccstring = '<?xml version="1.0" encoding="utf-8" ?><transcript><text start="0.08" dur="3.45">just want to show you</text></transcript> ';
+    var ccstring = '<?xml version="1.0" encoding="utf-8" ?>' +
+    '<transcript>' +
+       '<text start="0.08" dur="3.45">' +
+       "just want to show you uh... something i've been playing with lately</text>" +
+       '<text start="3.53" dur="5.099">it&amp;#39;s a javascript engine' +
+       ' called pixie js by good boy digital</text>'+
+    '</transcript>';
+
+    var expectStr = '' +
+    '1\n'+
+    '00:00:00,080 --> 00:00:03,530\n'+
+    "just want to show you uh... something i've been playing with lately\n"+
+    "2\n" +
+    "00:00:03,530 --> 00:00:08,629\n"+
+    "it's a javascript engine called pixie js by good boy digital\n";
 
     cc2str(ccstring, function(err,transcript){
 
-      // expect(transcript).is.a('object');
-      // expect(transcript).to.equal("1");
+      expect(transcript).to.equal(expectStr);
       done();
     });
 
@@ -56,4 +69,4 @@ describe('texts2str', function (){
   });
 
 
-});
+})
