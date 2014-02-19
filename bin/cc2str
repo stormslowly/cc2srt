@@ -1,7 +1,8 @@
+#!/usr/bin/env node
 "use strict";
 
 var fs = require('fs');
-var cc2str = require('./lib/cc2strlib.js').cc2str;
+var cc2str = require('../lib/cc2strlib.js').cc2str;
 var program = require('commander');
 
 program
@@ -12,7 +13,10 @@ program
 
 
 var ccFiles = program.args;
-console.log(ccFiles);
+if(ccFiles.length === 0 ){
+
+  program.help();
+}
 ccFiles.forEach(function handleCCFile(fileName){
 
   if( fileName.indexOf('.xml') ===-1 ){
