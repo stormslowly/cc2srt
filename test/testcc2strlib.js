@@ -23,10 +23,8 @@ describe("cc2str lib",function(){
 
     cc2str(ccstring, function(err,transcript){
 
-      console.log(transcript);
       // expect(transcript).is.a('object');
       // expect(transcript).to.equal("1");
-
       done();
     });
 
@@ -42,15 +40,18 @@ describe('texts2str', function (){
 
   var cctexts2str = lib.__get__('ccTexts2str');
 
-
   it('transform text array to str ',function (){
 
     var str = cctexts2str(
       [
-        { _: 'just want to show you', '$': [Object] }
+        { _: 'just want to show you', '$': { start: '0.08', dur: '3.45' } }
       ]);
+    var expctStr = "1\n"+
+                   "00:00:00,080 --> 00:00:03,530\n" +
+                   "just want to show you\n" ;
 
-    expect(str).to.equal('');
+
+    expect(str).to.equal(expctStr);
 
   });
 
