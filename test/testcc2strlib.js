@@ -63,10 +63,8 @@ describe('texts2str', function (){
                    "00:00:00,080 --> 00:00:03,530\n" +
                    "just want to show you\n" ;
 
-
     expect(str).to.equal(expctStr);
 
   });
 
-
-})
+});
