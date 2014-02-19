@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stormslowly/cc2str.git"
+    "url": "https://github.com/stormslowly/cc2srt.git"
   },
   "bin":{
     "cc2srt":"./bin/cc2srt"
