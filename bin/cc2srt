@@ -35,7 +35,7 @@ ccFiles.forEach(function handleCCFile(fileName){
         return;
       }
 
-      var ccfileName = fileName.replace('.xml','.str');
+      var ccfileName = fileName.replace('.xml','.srt');
 
       fs.writeFile(ccfileName,transcript,'utf8');
 
